@@ -1,18 +1,19 @@
 ---
+const base = import.meta.env.BASE_URL;
 ---
 
 <html lang="id">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/jpeg" href={`${base}favicon.jpg`} />
+    <link rel="apple-touch-icon" href={`${base}apple-touch-icon.jpg`} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
       content="Fun & Fine Learning Centre Karawang — les coding anak dengan Scratch. Main, bukan baca. Coba gratis!"
     />
-    <title>Fun & Fine — Les Coding Anak yang Fun!</title>
+    <title>Fun & Fine</title>
     <style>
       :root {
         --yellow: #ffe900;
@@ -278,7 +279,7 @@
   <body>
     <nav>
       <div class="nav-inner">
-        <a class="brand" href="#main"><img src="/img/logo.jpg" alt="Logo Fun and Fine" />Fun &amp; Fine</a>
+        <a class="brand" href="#main"><img src={`${base}img/logo.jpg`} alt="Logo Fun and Fine" />Fun &amp; Fine</a>
         <button id="hamburger" aria-label="Buka menu">≡</button>
         <div class="nav-links" id="navLinks">
           <a href="#main">Main</a>
@@ -297,7 +298,7 @@
           <span class="pill">Les Coding Anak • Scratch • Karawang &amp; Online</span>
           <h1>Ngoding itu <span class="fun">MAIN</span>, bukan menghafal!</h1>
           <p class="lead">
-            Di Fun &amp; Fine, anak bikin game sendiri bareng <strong>Ciko si Kucing</strong>.
+            Di Fun &amp; Fine, anak bikin game sendiri bareng <strong>Pipo si Kucing</strong>.
             Klik blok, lihat kucingnya bergerak, langsung jadi game. Tanpa baca dokumen membosankan.
           </p>
           <div class="hero-cta">
@@ -311,15 +312,15 @@
           </div>
         </div>
         <div class="stage-card">
-          <h3>Misi 1: Bantu Ciko sampai ke bintang!</h3>
-          <p style="margin:0 0 10px;font-size:14px;">Tekan tombol blok, atau <strong>Jalankan Misi</strong> biar Ciko jalan sendiri.</p>
+          <h3>Misi 1: Bantu Pipo sampai ke bintang!</h3>
+          <p style="margin:0 0 10px;font-size:14px;">Tekan tombol blok, atau <strong>Jalankan Misi</strong> biar Pipo jalan sendiri.</p>
           <div class="stage" id="heroStage">
             <div class="gridline" style="left:25%"></div>
             <div class="gridline" style="left:50%"></div>
             <div class="gridline" style="left:75%"></div>
-            <div class="speech" id="heroSpeech">Halo! Aku Ciko. Bantu aku ya!</div>
+            <div class="speech" id="heroSpeech">Halo! Aku Pipo. Bantu aku ya!</div>
             <div class="star-goal">★</div>
-            <svg class="cat" id="heroCat" style="--catchroma:#ff9421" viewBox="0 0 120 120" aria-label="Ciko si kucing">
+            <svg class="cat" id="heroCat" style="--catchroma:#ff9421" viewBox="0 0 120 120" aria-label="Pipo si kucing">
               <path d="M24 96 Q8 96 12 72" stroke="#ff9421" stroke-width="11" fill="none" stroke-linecap="round"/>
               <ellipse cx="60" cy="82" rx="30" ry="25" class="fur"/>
               <ellipse cx="60" cy="88" rx="15" ry="13" fill="#fff" opacity=".85"/>
@@ -348,13 +349,13 @@
       </div>
     </header>
 
-    <div class="marquee"><span>MAIN • NGODING • BIKIN GAME • SCRATCH • KUCING CIKO • MABAR • BADGE • GALERI MURID • COBA GRATIS •&nbsp;</span></div>
+    <div class="marquee"><span>MAIN • NGODING • BIKIN GAME • SCRATCH • KUCING Pipo • MABAR • BADGE • GALERI MURID • COBA GRATIS •&nbsp;</span></div>
 
     <!-- KUCING PROGRAMMABLE -->
     <section id="kucing">
       <div class="wrap">
         <span class="kicker">Level 2 • Kucing Programmable</span>
-        <h2>Susun blok, Ciko langsung nurut!</h2>
+        <h2>Susun blok, Pipo langsung nurut!</h2>
         <p class="sub">Klik blok di kiri buat nambah ke skrip, klik blok di skrip buat hapus. Lalu tekan <strong> Bendera Hijau</strong> buat jalanin. Persis kayak Scratch, tapi langsung di web ini.</p>
         <div class="play-grid">
           <div class="palette">
@@ -369,7 +370,7 @@
             </div>
           </div>
           <div class="scriptbox">
-            <h3>Skrip Ciko <span style="font-weight:400;font-size:13px;">(klik blok buat hapus)</span></h3>
+            <h3>Skrip Pipo <span style="font-weight:400;font-size:13px;">(klik blok buat hapus)</span></h3>
             <ul id="scriptList"><li style="background:#fff;">— kosong, tambah blok dulu —</li></ul>
             <div style="display:flex;gap:10px;flex-wrap:wrap;">
               <button class="btn-flag" id="runScript" aria-label="Jalankan">▶</button>
@@ -377,7 +378,7 @@
             </div>
             <div class="stage" id="playStage" style="margin-top:14px;">
               <div class="speech" id="playSpeech">Klik bendera hijau buat mulai!</div>
-              <svg class="cat" id="playCat" style="--catchroma:#ff9421" viewBox="0 0 120 120" aria-label="Ciko latihan">
+              <svg class="cat" id="playCat" style="--catchroma:#ff9421" viewBox="0 0 120 120" aria-label="Pipo latihan">
                 <path d="M24 96 Q8 96 12 72" stroke="#ff9421" stroke-width="11" fill="none" stroke-linecap="round"/>
                 <ellipse cx="60" cy="82" rx="30" ry="25" class="fur"/>
                 <ellipse cx="60" cy="88" rx="15" ry="13" fill="#fff" opacity=".85"/>
@@ -405,7 +406,7 @@
           <div class="game-card reveal">
             <div class="thumb t-fly">▲</div>
             <div class="body">
-              <h3>Flying Ciko</h3>
+              <h3>Flying Pipo</h3>
               <p style="font-size:14px;">Terbangin kucing lewatin gedung. Karya Naya, 9 th.</p>
               <div class="tags"><span class="tag">Scratch</span><span class="tag">when key pressed</span></div>
               <p class="creator">★ 4.9 • dimainkan 2,1 rb kali</p>
@@ -448,7 +449,7 @@
             <h3>Top Creator Cilik Minggu Ini</h3>
             <ul class="board">
               <li><span class="rank">1</span> Kirana • Tap-Tap Pipa <span style="margin-left:auto;color:var(--orange)">3.214</span></li>
-              <li><span class="rank">2</span> Naya • Flying Ciko <span style="margin-left:auto;color:var(--orange)">2.102</span></li>
+              <li><span class="rank">2</span> Naya • Flying Pipo <span style="margin-left:auto;color:var(--orange)">2.102</span></li>
               <li><span class="rank">3</span> Bima • Platform Petualang <span style="margin-left:auto;color:var(--orange)">1.768</span></li>
               <li><span class="rank">4</span> Dafa • Animasi Antariksa <span style="margin-left:auto;color:var(--orange)">1.205</span></li>
             </ul>
@@ -490,11 +491,11 @@
                 <polygon points="60,60 55,65 65,65" fill="#ff6fa5"/>
                 <path d="M60 65 Q60 70 54 70 M60 65 Q60 70 66 70" stroke="#14213d" stroke-width="2" fill="none"/>
               </svg>
-              <div><strong id="avatarName">Ciko</strong><br /><span style="font-size:13px;color:#5b6b8c;" id="avatarTitle">Si Pemberani • Level 1</span></div>
+              <div><strong id="avatarName">Pipo</strong><br /><span style="font-size:13px;color:#5b6b8c;" id="avatarTitle">Si Pemberani • Level 1</span></div>
             </div>
             <div class="field">
               <label for="catName">Nama kucingmu</label>
-              <input id="catName" maxlength="14" value="Ciko" />
+              <input id="catName" maxlength="14" value="Pipo" />
             </div>
             <div class="field">
               <label>Warna bulu</label>
@@ -523,7 +524,7 @@
             <div><span class="roomcode" id="roomCode" style="display:none;">------</span></div>
             <div class="mabar-team" id="teamList"></div>
             <div class="racer">
-              <div class="who"><span id="racerMeName">Ciko</span> (kamu)</div>
+              <div class="who"><span id="racerMeName">Pipo</span> (kamu)</div>
               <div class="track"><div class="runner" id="runMe">▲</div></div>
             </div>
             <div class="racer">
@@ -548,21 +549,21 @@
         <p class="sub">Tanpa angka harga yang bikin kaget di depan. Isi form, tim kami hubungi via WA, anak langsung ikut sesi trial main bareng mentor.</p>
         <div class="prog-grid">
           <div class="prog-card reveal">
-            <img src="/img/program1.jpg" alt="After School Program Fun and Fine" loading="lazy" />
+            <img src={`${base}img/program1.jpg`} alt="After School Program Fun and Fine" loading="lazy" />
             <div class="body">
               <h3>After School Program (4–12 th)</h3>
               <p style="font-size:14px;">Belajar aktif individu &amp; kelompok: estetik, afeksi, kognisi, bahasa, fisik, sosial + HOTS. <strong>Free Trial tersedia.</strong></p>
             </div>
           </div>
           <div class="prog-card reveal">
-            <img src="/img/program2.jpg" alt="English with Coding online" loading="lazy" />
+            <img src={`${base}img/program2.jpg`} alt="English with Coding online" loading="lazy" />
             <div class="body">
               <h3>English with Coding — Online (7–15 th)</h3>
               <p style="font-size:14px;">Belajar Bahasa Inggris sekaligus coding lewat project based learning: flying game, platform game, tap-tap game, animasi.</p>
             </div>
           </div>
           <div class="prog-card reveal">
-            <img src="/img/igpost.jpg" alt="Fun and Fine Computer Science" loading="lazy" />
+            <img src={`${base}img/igpost.jpg`} alt="Fun and Fine Computer Science" loading="lazy" />
             <div class="body">
               <h3>Computer Science</h3>
               <p style="font-size:14px;">Lanjut ke API, web, dan AI buat yang sudah lulus Scratch. Tanya-tanya dulu gratis: <strong>0882-1228-4494</strong>.</p>
@@ -572,7 +573,7 @@
         <div class="cta-box reveal">
           <div>
             <h2>Coba sesi main gratis minggu ini!</h2>
-            <p>30 menit main Scratch bareng mentor + kucing Ciko. Anak pulang bawa game pertamanya. Kuota tiap kelas dibatasi biar mentor fokus.</p>
+            <p>30 menit main Scratch bareng mentor + kucing Pipo. Anak pulang bawa game pertamanya. Kuota tiap kelas dibatasi biar mentor fokus.</p>
             <div class="contact-chips">
               <a href="tel:088212284494">Telp 0882-1228-4494</a>
               <a href="mailto:funandfine.krw@gmail.com">funandfine.krw@gmail.com</a>
@@ -605,7 +606,7 @@
       <div class="wrap">
         <span class="kicker">Tanya Mentor</span>
         <h2>Yang sering ditanyain orang tua</h2>
-        <details><summary>Apa itu Scratch? Anak saya belum bisa ngoding sama sekali.</summary><p>Scratch itu bahasa visual buat anak: ngoding dengan menyusun blok warna-warni kayak puzzle, tanpa ketik sintaks. Nol pengalaman = justru murid favorit kami. Maskotnya kucing oren yang jadi Ciko di halaman ini.</p></details>
+        <details><summary>Apa itu Scratch? Anak saya belum bisa ngoding sama sekali.</summary><p>Scratch itu bahasa visual buat anak: ngoding dengan menyusun blok warna-warni kayak puzzle, tanpa ketik sintaks. Nol pengalaman = justru murid favorit kami. Maskotnya kucing oren yang jadi Pipo di halaman ini.</p></details>
         <details><summary>Perlu laptop sendiri? Perlu bisa Bahasa Inggris?</summary><p>Tidak wajib. Di kelas offline perangkat disediakan. Bahasa Inggris dipelajari sambil jalan lewat program English with Coding — anak belajar vocabulary dari blok dan game yang ia bikin sendiri.</p></details>
         <details><summary>Online atau offline? Lokasinya di mana?</summary><p>Dua-duanya ada. Offline di Gd. Robotics Education Centre, Ruko Courtyard Blok VII No. C-2, Galuhmas, Telukjambe Timur, Karawang. Online tersedia untuk program 7–15 tahun.</p></details>
         <details><summary>Biayanya mahal nggak?</summary><p>Coba sesi trial-nya gratis dulu. Kalau anak nagih dan mau lanjut, tim kami kirim info program yang paling cocok via WA — transparan, tanpa komitmen di depan. Fokus kami: anak fun dulu.</p></details>
@@ -628,7 +629,7 @@
           <p style="font-size:14px;">Telp: <a href="tel:088212284494">0882-1228-4494</a> / 0813-1882-9924<br />Online: 0878-7913-7034 / 0819-0689-0623<br />E-mail: <a href="mailto:funandfine.krw@gmail.com">funandfine.krw@gmail.com</a><br />IG: <a href="https://instagram.com/funandfinekarawang" target="_blank" rel="noreferrer">@funandfinekarawang</a></p>
         </div>
       </div>
-      <div class="wrap" style="margin-top:20px;font-size:13px;">© 2026 Fun &amp; Fine Learning Centre • Dibuat dengan blok Scratch &amp; kucing Ciko</div>
+      <div class="wrap" style="margin-top:20px;font-size:13px;">© 2026 Fun &amp; Fine Learning Centre • Dibuat dengan blok Scratch &amp; kucing Pipo</div>
     </footer>
 
     <button id="toTop" aria-label="Ke atas">↑</button>
@@ -785,7 +786,7 @@
           if (act === "mundur") { playPos = Math.max(6, playPos - 7); playCat.style.left = playPos + "%"; playSay("Mundur dikit!"); }
           if (act === "lompat") { playCat.classList.remove("jump"); void playCat.offsetWidth; playCat.classList.add("jump"); playSay("Wheee!"); }
           if (act === "putar") { playCat.classList.remove("dance"); void playCat.offsetWidth; playCat.classList.add("dance"); playSay("La la la~"); await sleep(900); playCat.classList.remove("dance"); }
-          if (act === "halo") playSay("Halo! Namaku Ciko!");
+          if (act === "halo") playSay("Halo! Namaku Pipo!");
           if (act === "meong") playSay("Meong meong!");
           await sleep(650);
         }
@@ -797,9 +798,9 @@
 
       // ---------- GALLERY modal ----------
       const GAMES = {
-        flying: { t: "Flying Ciko", d: "Ketuk / tekan spasi biar Ciko terbang lewatin gedung. Kalau nabrak, ulangi dari checkpoint.", tags: ["Scratch", "when key pressed", "variabel nyawa"], how: "Cara bikin: blok forever + if touching + change y. Anak kelas dasar sudah bisa dalam 2 pertemuan." },
+        flying: { t: "Flying Pipo", d: "Ketuk / tekan spasi biar Pipo terbang lewatin gedung. Kalau nabrak, ulangi dari checkpoint.", tags: ["Scratch", "when key pressed", "variabel nyawa"], how: "Cara bikin: blok forever + if touching + change y. Anak kelas dasar sudah bisa dalam 2 pertemuan." },
         platform: { t: "Platform Petualang", d: "Lompat dari platform ke platform, kumpulin 10 koin emas secepat mungkin.", tags: ["Scratch", "variabel skor", "scrolling"], how: "Cara bikin: blok sensing warna tanah + variabel skor + timer. Favorit anak 10–12 tahun." },
-        tap: { t: "Tap-Tap Pipa", d: "Ketuk layar biar Ciko lolos pipa hijau. Tiap lolos +1 poin, makin lama makin cepat.", tags: ["Scratch", "clone", "game over"], how: "Cara bikin: clone pipa + forever move + if touching. Karya Kirana dimainkan 3.200+ kali." },
+        tap: { t: "Tap-Tap Pipa", d: "Ketuk layar biar Pipo lolos pipa hijau. Tiap lolos +1 poin, makin lama makin cepat.", tags: ["Scratch", "clone", "game over"], how: "Cara bikin: clone pipa + forever move + if touching. Karya Kirana dimainkan 3.200+ kali." },
         space: { t: "Animasi Antariksa", d: "Planet mengelilingi matahari dengan orbit masing-masing. Ada fakta sains tiap planet!", tags: ["Scratch", "broadcast", "pengetahuan"], how: "Cara bikin: blok motion go to + repeat berlapis + say. Belajar coding sekaligus sains." }
       };
       const modal = $("#modal");
@@ -825,7 +826,7 @@
       }));
       $("#hatSelect").addEventListener("change", (e) => { hatPreview.textContent = e.target.value; });
       $("#catName").addEventListener("input", (e) => {
-        const v = e.target.value.trim() || "Ciko";
+        const v = e.target.value.trim() || "Pipo";
         $("#avatarName").textContent = v;
         $("#racerMeName").textContent = v;
       });
@@ -843,7 +844,7 @@
         rc.style.display = "inline-block"; rc.textContent = code;
         const team = $("#teamList");
         team.innerHTML = "";
-        const meName = ($("#catName").value.trim() || "Ciko") + " (kamu)";
+        const meName = ($("#catName").value.trim() || "Pipo") + " (kamu)";
         [meName].forEach((n) => {
           const s = document.createElement("span"); s.className = "mate"; s.textContent = n; team.appendChild(s);
         });
